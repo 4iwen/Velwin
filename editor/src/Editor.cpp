@@ -15,17 +15,13 @@
 class Editor : public Velwin::Application {
 public:
     Editor() {
-        glfwInit();
+        if (glfwInit()) {
+            LOG_CRITICAL("Failed to initialize GLFW!");
+        }
 
         glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+
         GLFWwindow *window = glfwCreateWindow(800, 600, "Velwin Editor", nullptr, nullptr);
-
-        uint32_t extensionCount = 0;
-        vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
-
-        glm::mat4 matrix;
-        glm::vec4 vec;
-        auto test = matrix * vec;
 
         while (!glfwWindowShouldClose(window)) {
             glfwPollEvents();
