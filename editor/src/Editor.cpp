@@ -15,7 +15,7 @@
 class Editor : public Velwin::Application {
 public:
     Editor() {
-        if (glfwInit()) {
+        if (!glfwInit()) {
             LOG_CRITICAL("Failed to initialize GLFW!");
         }
 
