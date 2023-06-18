@@ -12,6 +12,7 @@ include_directories(
         vendor/glfw/include
         vendor/glm
         vendor/spdlog/include
+        vendor/imgui
         engine/src
         ${Vulkan_INCLUDE_DIRS})
 
