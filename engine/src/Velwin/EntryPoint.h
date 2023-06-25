@@ -16,13 +16,7 @@ int main(int argc, char **argv) {
     LOG_ERROR("Error!");
     LOG_CRITICAL("Critical error!");
 
-    /*
-    auto *app = Velwin::CreateApplication();
-    app->Run();
-    delete app;
-    */
-
-    std::unique_ptr<Velwin::Application> app(Velwin::CreateApplication());
+    Velwin::Application app(Velwin::CreateApplication());
     app->Run();
 }
 

@@ -1,7 +1,23 @@
-set(SOURCE_FILES
-        src/Velwin/Core.h src/Velwin.h src/Velwin/Log.cpp src/Velwin/Log.h src/Velwin/Application.cpp src/Velwin/Application.h src/Velwin/EntryPoint.h)
+# include directories
+include_directories(
+        vendor/glfw/include
+        vendor/glm
+        ${Vulkan_INCLUDE_DIRS}
+        vendor/imgui
+        vendor/spdlog/include
+        Engine/src
+)
 
-add_compile_definitions(VELWIN_EXPORTS)
+# dependencies
+add_subdirectory(vendor/glfw)
+add_subdirectory(vendor/glm)
+add_subdirectory(vendor/spdlog)
 
-add_library(engine SHARED
-        ${SOURCE_FILES})
+add_library("Engine" "cmake_stinky.cpp" "cmake_stinky.h")
+
+# link libraries
+target_link_libraries("Engine"
+        glfw
+        glm
+        spdlog
+        ${Vulkan_LIBRARIES})
