@@ -13,7 +13,9 @@ add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/glm)
 add_subdirectory(vendor/spdlog)
 
-add_library("Engine" "cmake_stinky.cpp" "cmake_stinky.h")
+add_library(Engine
+        cmake_stinky.cpp
+        cmake_stinky.h)
 
 # link libraries
 target_link_libraries("Engine"
