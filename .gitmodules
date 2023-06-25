@@ -1,13 +1,13 @@
 [submodule "vendor/spdlog"]
-	path = engine/vendor/spdlog
+	path = Engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
 [submodule "vendor/glm"]
-	path = engine/vendor/glm
+	path = Engine/vendor/glm
 	url = https://github.com/g-truc/glm.git
 [submodule "vendor/glfw"]
-	path = engine/vendor/glfw
+	path = Engine/vendor/glfw
 	url = https://github.com/glfw/glfw.git
 [submodule "vendor/imgui"]
-	path = engine/vendor/imgui
+	path = Engine/vendor/imgui
 	url = https://github.com/ocornut/imgui.git
 	branch = docking
