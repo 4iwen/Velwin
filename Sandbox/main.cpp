@@ -1,7 +1,7 @@
 ﻿// cmake_stinky.cpp: Definuje vstupní bod pro aplikaci.
 //
 
-#include "cmake_stinky.h"
+#include "main.h"
 
 using namespace std;
 

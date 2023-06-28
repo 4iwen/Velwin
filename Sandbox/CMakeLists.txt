@@ -1,5 +1,5 @@
 add_executable(Sandbox
-        cmake_stinky.cpp
-        cmake_stinky.h)
+        "main.cpp"
+        "main.h")
 
 target_link_libraries(Sandbox PRIVATE Engine)
