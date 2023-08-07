@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Core.h"
-#include "spdlog/spdlog.h"
+#include "Core/Api.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/spdlog.h"
 
 namespace Velwin {
     class VELWIN_API Log {

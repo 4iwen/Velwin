@@ -1,5 +1,21 @@
-add_executable(Sandbox
-        "main.cpp"
-        "main.h")
+include_directories(
+        ../Engine/src
+)
 
-target_link_libraries(Sandbox PRIVATE Engine)
+set(
+        SOURCE_FILES
+
+        main.cpp
+)
+
+add_executable(
+        Sandbox
+
+        ${SOURCE_FILES}
+)
+
+target_link_libraries(
+        Sandbox PRIVATE
+
+        Engine
+)

@@ -1,12 +1,9 @@
-﻿// cmake_stinky.cpp: Definuje vstupní bod pro aplikaci.
-//
+﻿#include <Velwin/Core/Api.h>
+#include <Velwin/Core/Base.h>
+#include <Velwin.h>
 
-#include "main.h"
+int main() {
+    LOG_INFO("Hello from Sandbox!");
 
-using namespace std;
-
-int main()
-{
-	cout << "Hello CMake." << endl;
-	return 0;
+    return 0;
 }

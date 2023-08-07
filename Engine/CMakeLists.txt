@@ -13,21 +13,27 @@ add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/glm)
 add_subdirectory(vendor/spdlog)
 
-add_compile_definitions(VELWIN_EXPORTS)
-
-set(SOURCES
+set(
+        SOURCE_FILES
         src/Velwin.h
-        src/Velwin/Core.h
+        src/Velwin/Core/Api.h
         src/Velwin/Log.cpp
         src/Velwin/Log.h
         src/Velwin/Application.cpp
         src/Velwin/Application.h
-        src/Velwin/EntryPoint.h)
+        src/Velwin/EntryPoint.h
+)
 
-add_library("Engine" SHARED ${SOURCES})
+if (VELWIN_BUILD_SHARED)
+    add_compile_definitions(VELWIN_SHARED VELWIN_EXPORTS)
+    add_library(Engine SHARED ${SOURCE_FILES})
+else ()
+    add_compile_definitions(VELWIN_EXPORTS)
+    add_library(Engine STATIC ${SOURCE_FILES})
+endif ()
 
 # link libraries
-target_link_libraries("Engine"
+target_link_libraries(Engine
         glfw
         glm
         spdlog
